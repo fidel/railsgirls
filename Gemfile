@@ -30,6 +30,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'carrierwave'
 gem 'mini_magick'
 
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails',
+                              :branch => '3.0.0'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

@@ -1,13 +1,10 @@
-<h1>Ideas</h1>
-<hr />
+<div class="row">
+  <% @ideas.each do |idea| %>
+    <div class="col-6 col-sm-6 col-lg-4">
+      <h2><%= link_to idea.name, idea %></h2>
+      <p><%= image_tag idea.picture_url(:thumb) if idea.picture? %></p>
+      <p><%= link_to 'New Idea', new_idea_path, html: { class: "btn btn-default" } %></p>
+    </div><!--/span-->
+  <% end %>
+</div><!--/row-->
 
-<% @ideas.each do |idea| %>
-  <div>
-    <h2><%= link_to idea.name, idea %></h2>
-    <%= image_tag idea.picture_url(:thumb) if idea.picture? %>
-  </div>
-<% end %>
-
-<br>
-
-<%= link_to 'New Idea', new_idea_path %>
